@@ -15,8 +15,5 @@ export class AppComponent  {
 
   // Feel free to put your own data here if you have other favorite flops
   flops = FLOP_DATA;
-	
-
-
 
 }

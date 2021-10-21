@@ -9,12 +9,4 @@
   (don't show until they choose one)
 </div>
 
-<div style="display:flex; justify-content:space-around">
-  <div style="cursor:pointer;">
-    <img [src]="flops[0].imageUrl" style="width:8rem; height:auto" alt="" />
-  </div>
-
-  <div style="cursor:pointer">
-    <img [src]="flops[1].imageUrl" style="width:8rem; height:auto" alt="" />
-  </div>
-</div>
+<app-movie-display [movieData]="flops"></app-movie-display>
