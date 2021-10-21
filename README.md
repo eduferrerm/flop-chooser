@@ -1,4 +1,13 @@
-# FlopChooser
+_# EXCERCISE_
+1) Display 2 random movies from the list of movies and allow the user to guess which one has a lower IMDB rating
+
+2) Display if they were right or wrong, and display a button that lets them try again with 2 more random movies.
+
+3) Use service(s) appropriately
+
+4) Use and encapsulate styles appropriately
+
+## FlopChooser
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.9.
 
@@ -25,12 +34,3 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-
-# EXCERCISE
-1) Display 2 random movies from the list of movies and allow the user to guess which one has a lower IMDB rating
-
-2) Display if they were right or wrong, and display a button that lets them try again with 2 more random movies.
-
-3) Use service(s) appropriately
-
-4) Use and encapsulate styles appropriately
