@@ -10,11 +10,12 @@ export class MovieDisplayComponent implements OnInit {
 
   constructor() { }
 
+  displayingMovies: any = [];
   movieAimage: any;
   movieBimage: any;
 
   ngOnInit(): void {
-    this.getImageUrls();
+    this.getMovieImage();
   }
 
   generateRandomInteger() {
@@ -23,18 +24,41 @@ export class MovieDisplayComponent implements OnInit {
     return Math.floor(Math.random() * (max - min) + min);
   }
   
-  getImageUrls() {
-    let randomNumber1 = this.generateRandomInteger();
-    let randomNumber2 = this.generateRandomInteger();
+  getRandomMovies() {
+    let randomNumbers = [this.generateRandomInteger(),this.generateRandomInteger()];
     
-    if (randomNumber1 === randomNumber2) {
-      randomNumber1 = this.generateRandomInteger();
+    randomNumbers.forEach((item, index)=>{
+      while(randomNumbers.indexOf(item) !== index){
+        randomNumbers = [this.generateRandomInteger(),this.generateRandomInteger()];
+      }
+    })
+    this.displayingMovies.push(this.movieData[randomNumbers[0]]);
+    this.displayingMovies.push(this.movieData[randomNumbers[1]]);      
+  };
 
+  getMovieImage(){
+    this.getRandomMovies();
+    this.movieAimage = this.displayingMovies[0].imageUrl;
+    this.movieBimage = this.displayingMovies[1].imageUrl;
+  };
+
+  compareMovieRating(movieClicked: number){
+    let selectedMovieRating = this.displayingMovies[movieClicked].stars;
+    let otherMovie = movieClicked === 0 ? 1 : 0;
+    let otherMovieRating = this.displayingMovies[otherMovie].stars;
+    
+    console.log('selected movie:', this.displayingMovies[movieClicked].title);
+
+    if (selectedMovieRating < otherMovieRating) {
+      console.log('correct!');
+      console.log('selected movie rating:',  selectedMovieRating);
+      console.log('other movie rating:',  otherMovieRating);
+      console.log(' ');
     } else {
-      
-      this.movieAimage = this.movieData[randomNumber1].imageUrl;
-      this.movieBimage = this.movieData[randomNumber2].imageUrl;
+      console.log('WRONG');
+      console.log('selected movie rating:',  selectedMovieRating);
+      console.log('other movie rating:',  otherMovieRating);
+      console.log(' ');
     }
-  } 
-  
+  };
 }

@@ -1,9 +1,9 @@
-<div style="display:flex; justify-content:space-around">
-  <div style="cursor:pointer;">
-    <img [src]="movieAimage" style="width:8rem; height:auto" alt="" />
+<div class="movie-display__container">
+  <div class="movie-display__container__item" (click)="compareMovieRating(0)">
+    <img [src]="movieAimage" alt="" />
   </div>
 
-  <div style="cursor:pointer">
-    <img [src]="movieBimage" style="width:8rem; height:auto" alt="" />
+  <div class="movie-display__container__item" (click)="compareMovieRating(1)">
+    <img [src]="movieBimage" alt="" />
   </div>
 </div>

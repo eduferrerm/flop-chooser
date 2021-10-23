@@ -11,4 +11,5 @@ import { MovieDisplayComponent } from './app/components/movie-display/movie-disp
   declarations: [ AppComponent, MovieDisplayComponent ],
   bootstrap:    [ AppComponent ]
 })
+
 export class AppModule { }

@@ -1,0 +1,21 @@
+.movie-display__container {
+  display:flex; 
+  justify-content:space-around;
+  
+  &__item {
+    cursor:pointer;
+    
+    img {
+      width: 100%; 
+      max-width: 190px;
+      height: auto;
+      padding: 5px;
+    }
+    .movie-a {
+      
+    }
+    .movie-b {
+
+    }
+  }
+}
