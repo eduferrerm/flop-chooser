@@ -1,9 +1,9 @@
 <div class="movie-display__container">
-  <div class="movie-display__container__item" (click)="compareMovieRating(0)">
-    <img [src]="movieAimage" alt="" />
+  <div class="movie-display__container__item" (click)="movieDisplayService.compareMovieRating(0)">
+    <img [src]="movieDisplayService.movieAimage" alt="" />
   </div>
 
-  <div class="movie-display__container__item" (click)="compareMovieRating(1)">
-    <img [src]="movieBimage" alt="" />
+  <div class="movie-display__container__item" (click)="movieDisplayService.compareMovieRating(1)">
+    <img [src]="movieDisplayService.movieBimage" alt="" />
   </div>
 </div>

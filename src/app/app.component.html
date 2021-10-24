@@ -2,11 +2,12 @@
 
 <div style="margin-bottom:2rem">
   <p>Which movie has a lower IMDB rating?</p>
-  <p>
-    Correct or Incorrect Message Here! (how can you show or hide an element?
+  <h3 *ngIf="movieDisplayService.userCorrect" [hidden]="!movieDisplayService.selectionWasMade">CORRECT!</h3>
+  <h3 *ngIf="!movieDisplayService.userCorrect" [hidden]="!movieDisplayService.selectionWasMade">WRONG =(</h3>
+  <p [hidden]="!movieDisplayService.selectionWasMade">
+    {{movieDisplayService.message}}
   </p>
-  <button class="btn btn-primary">Play Again Yeah buddy</button>
-  (don't show until they choose one)
+  <button class="btn btn-primary" [hidden]="!movieDisplayService.selectionWasMade" (click)="movieDisplayService.restartGame()">Play Again</button>
 </div>
 
-<app-movie-display [movieData]="flops"></app-movie-display>
+<app-movie-display></app-movie-display>
